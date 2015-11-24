@@ -1,0 +1,9 @@
+AllCops:
+  Include:
+    - Gemfile
+    - Rakefile
+    - rspec-cloud-core.gemspec
+LineLength:
+  Enabled: false
+Documentation:
+  Enabled: false
