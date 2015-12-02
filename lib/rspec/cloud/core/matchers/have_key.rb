@@ -1,7 +1,7 @@
 RSpec::Matchers.define :have_key do |expected|
   match do |actual|
     result = actual.key? expected
-    result = actual[expected] == value if value
+    result = actual[expected] == value if value && result
     result
   end
 
