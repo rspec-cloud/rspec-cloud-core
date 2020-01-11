@@ -2,6 +2,7 @@ sudo: false
 cache: bundler
 
 language: ruby
+cache: bundler
 
 rvm:
   - 2.5.0
@@ -31,4 +32,4 @@ matrix:
 before_install: 'gem install bundler'
 
 script:
-  - bundle exec rake ci
+  - bundle exec rake
