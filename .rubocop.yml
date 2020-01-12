@@ -3,7 +3,5 @@ AllCops:
     - Gemfile
     - Rakefile
     - rspec-cloud-core.gemspec
-LineLength:
-  Enabled: false
-Documentation:
-  Enabled: false
+Layout/LineLength:
+  Max: 120

@@ -1,4 +1,10 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
+
+describe 1234 do
+  it { should have_digits(4) }
+end
 
 describe 'test_string' do
   it { should_not be_integer }

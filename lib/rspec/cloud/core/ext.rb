@@ -1,3 +1,11 @@
+# frozen_string_literal: true
+
+class Integer
+  def digits
+    to_s.gsub(/^\-/, '').size
+  end
+end
+
 class String
   def integer?
     self =~ /\A[-+]?[0-9]+\z/
@@ -14,6 +22,7 @@ class String
 
   def to_camel_case
     return self if self !~ /_/ && self =~ /[A-Z]+.*/
+
     split('_').map(&:capitalize).join
   end
 
@@ -26,8 +35,9 @@ class String
   end
 
   def to_bool
-    return false if self =~ (/^(false)$/i)
-    return true  if self =~ (/^(true)$/i)
-    fail "invalid value for Boolean: \"#{self}\""
+    return false if self =~ /^(false)$/i
+    return true  if self =~ /^(true)$/i
+
+    raise "invalid value for Boolean: \"#{self}\""
   end
 end
