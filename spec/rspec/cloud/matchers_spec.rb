@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe 'RSpec::Matchers.be_equal_to' do
@@ -9,6 +11,16 @@ describe 'RSpec::Matchers.be_equal_to' do
     it { should have_value 'teststring' }
 
     it { should_not be_nil }
+  end
+end
+
+describe 'RSpec::Matchers.have_digits' do
+  context 'with an Integer' do
+    subject do
+      1234
+    end
+
+    it { should have_digits(4) }
   end
 end
 
